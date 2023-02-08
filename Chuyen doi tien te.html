@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+</head>
+<body>
+<table>
+    <th>
+        <label for="Amount">Amount</label>
+    </th>
+    <th>
+        From Currency
+    </th>
+    <th>
+        To Currency
+    </th>
+    <tr>
+        <td>
+            <input type="text" id="Amount" name="Currency">
+
+        </td>
+        <td>
+            <select id="From">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ChangeMoney()">CONVERT</button>
+        </td>
+    </tr>
+
+</table>
+<tp id="Result"> </tp>
+</body>
+<script src="Chuyen%20doi%20tien%20te.js"></script>
+</html>
