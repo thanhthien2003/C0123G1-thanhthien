@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+</head>
+<body>
+<h1> NHẬP TUỔI VÀO ĐI </h1>
+<input type="number" id="tuoi">
+<button onclick="date()">Enter</button>
+<p id="result">Enter đi mới biết chứ </p>
+<script>
+    function date() {
+        var a = document.getElementById("tuoi").value;
+        var result;
+        if (a % 1 === 0) {
+            if (a > 0 && a < 120) {
+                result = "người này tuổi  " + a
+            } else {
+                result = "này là quái vật rồi chứ người sao có tuổi z pà nội"
+            }
+        } else {
+            result = "tuổi mà cũng có số lẻ nửa hả ba?"
+        }
+
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+</body>
+</html>

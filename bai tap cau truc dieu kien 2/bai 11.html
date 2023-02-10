@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 11</title>
+</head>
+<body>
+<h1>Thue thu nhap ca nhan </h1>
+<label for="T" >Thu nhap tinh thue</label>
+<input type="number" id="T" placeholder="Tong thu  : trieu dong" >
+<button onclick="TS()">Tính tiền thuế thu nhập bản </button>
+<p id="result"> Lượng thuế phải chịu là  </p>
+<script>
+    function TS() {
+        var T = +document.getElementById("T").value;
+
+        var result ;
+        if (T <= 5) {
+            result =  ( T * 5 ) / 100
+        } else if ( T > 5 && T <= 10) {
+            result = (T * 10) / 100
+        } else if (T > 10 && T <= 18) {
+            result = (T*15) / 100
+        } else if (T > 18 && T <= 32) {
+            result = (T*20) / 100
+        } else if (T > 32 && T <= 52) {
+            result = (T*25)/100
+        } else if (T > 52 && T <= 80) {
+            result = ( T * 30 ) / 100
+        } else if  (T > 80) {
+            result = (T * 35)/100
+        }
+        document.getElementById("result").innerHTML = result + "triệu đồng"
+    }
+</script>
+</body>
+</html>

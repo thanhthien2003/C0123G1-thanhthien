@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+ <h1> Giải phương trình bậc 2 có dạng ax^2 + bx + c = 0</h1>
+ <input type="number" id="a" placeholder="nhap he so a">
+ <input type="number" id="b" placeholder="nhap he so b">
+ <input type="number" id="c" placeholder="nhap he so c">
+ <button onclick="No()" > tinh nghiem phuong trinh </button>
+<p id="result">nghiem cua phuong trinh la </p>
+<script>
+    function No() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var B = b / 2;
+        var denta = Math.pow(B, 2) - (a * c);
+        var x1;
+        var x2;
+        var Bb = Math.sqrt(denta);
+        var result;
+        if (denta > 0) {
+            x1 = (-B + Bb) / a;
+            x2 = (-B - Bb) / a;
+            result = "phuong trinh co nghiem " + x1 + " va " + x2
+        } else if (denta === 0) {
+            x1 = (-B) / a;
+            x2= x1 ;
+            result = "phuong trinh co nghiem kep x1 = x2 = " + x2
+        } else if (denta < 0) {
+            result = " phuong trinh vo nghiem "
+        }
+
+        document.getElementById("result").innerHTML = result
+    }
+
+
+</script>
+</body>
+</html>

@@ -5,52 +5,51 @@
     <title>cau lenh switch case</title>
 </head>
 <body>
-    <label for="thang"> </label>
-    <input type="number"  id="thang">
-    <button onclick="Tinh()" min="1" max="12" >Tính số ngày</button>
-    <p id="result"> day la cho hien thi ket qua </p>
+<label for="thang"> </label>
+<input type="number" id="thang">
+<button onclick="Tinh()" min="1" max="12">Tính số ngày</button>
+<p id="result"> day la cho hien thi ket qua </p>
 </body>
 <script>
 
-
     function Tinh() {
         let month = document.getElementById("thang").value;
-        let result  ;
-        let thang_1 = "1";
-        let thang_2 = "2";
-        let thang_3 = "3";
-        let thang_4 = "4";
-        let thang_5 = "5";
-        let thang_6 = "6";
-        let thang_7 = "7";
-        let thang_8 = "8";
-        let thang_9 = "9";
-        let thang_10 = "10";
-        let thang_11 = "11";
-        let thang_12 = "12";
+        let result;
+        let thang1 = "1";
+        let thang2 = "2";
+        let thang3 = "3";
+        let thang4 = "4";
+        let thang5 = "5";
+        let thang6 = "6";
+        let thang7 = "7";
+        let thang8 = "8";
+        let thang9 = "9";
+        let thang10 = "10";
+        let thang11 = "11";
+        let thang12 = "12";
 
         switch (month) {
-        case  thang_1:
-        case  thang_3:
-        case  thang_5:
-        case  thang_7:
-        case  thang_8:
-        case  thang_10:
-        case  thang_12:
-            document.getElementById("result").innerHTML = "thang " + month + " thang nay co 31 ngay"
-        break;
-        case  thang_4:
-        case  thang_6:
-        case  thang_9:
-        case  thang_11:
-            document.getElementById("result").innerHTML = "thang" + month + "thang nay co 30 ngay"
-            break;
-            case thang_2:
+            case  thang1:
+            case  thang3:
+            case  thang5:
+            case  thang7:
+            case  thang8:
+            case  thang10:
+            case  thang12:
+                document.getElementById("result").innerHTML = "thang " + month + " thang nay co 31 ngay"
+                break;
+            case  thang4:
+            case  thang6:
+            case  thang9:
+            case  thang11:
+                document.getElementById("result").innerHTML = "thang" + month + "thang nay co 30 ngay"
+                break;
+            case thang2:
                 document.getElementById("result").innerHTML = "thang" + month + "thang nay dac biet chi co 29 ngay hoac 28 ngay"
                 break;
             default:
                 document.getElementById("result").innerHTML = "nhap lai di ban oi chu lam gi co thang hon 13 ?"
-    }
+        }
 
 
     }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 10 </title>
+</head>
+<body>
+<h1>Giá tiền diện 1 ngày sử dụng là </h1>
+<label for="P" >Công suất tiêu thụ</label>
+<input type="number" id="P" placeholder="Công suất tiêu thụ : W" >
+<label for="T" >Thời gian sử dụng</label>
+<input type="number" id="T" placeholder="Thời gian tiêu thụ : Tiếng" >
+<button onclick="PT()">Tính tiền điện</button>
+<p id="result">Luong dien tieu thu la </p>
+<script>
+    function PT() {
+    var P = +document.getElementById("P").value;
+    var T = +document.getElementById("T").value;
+    var result = P * T ;
+    document.getElementById("result").innerHTML = result + "Wh"
+    }
+</script>
+</body>
+</html>

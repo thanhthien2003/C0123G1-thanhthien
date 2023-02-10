@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<h1> phuong trinh co dang ax+b=0 </h1>
+<input type="number" id="a" placeholder="nhap he so a">
+<input type="number" id="b" placeholder="nhap he so b">
+<button onclick="No()"> tinh nghiem phuong trinh</button>
+<p id="result"> ... </p>
+<script>
+    function No() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    var c = -b/a;
+    var result ;
+    if (a === 0) {
+        if (b === 0) {
+            result = "phuong trinh co vo so nghiem "
+        } else if (b !== 0){
+            result = " Phuong trinh vo nghiem "
+        }
+    } else if (a !==0) {
+        result = "phuong trinh co nghiem " + c
+    }
+    document.getElementById("result").innerHTML = result
+
+    }
+</script>
+
+</body>
+</html>

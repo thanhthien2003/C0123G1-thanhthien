@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 12</title>
+</head>
+<body>
+<h3> Tính lãi mẹ đẻ lãi con</h3>
+<label for="soA">Số tiền vay</label>
+<input type="number" id="soA" placeholder="Nhập vào đây"> VND
+<label for="soB">so thang</label>
+<input type="number" id="soB"placeholder="Nhập vào đây"> Tháng
+<label for="soC">Lãi suất 1 tháng :</label>
+<input type="number" id="soC"placeholder="Nhập vào đây"> %
+<button  onclick="go()">Go</button>
+<label id="ketQua"></label>
+</body>
+<script>
+    function go() {
+        var soA = Number(document.getElementById("soA").value);
+        var soB = Number(document.getElementById("soB").value);
+        var soC = Number(document.getElementById("soC").value);
+        var soTienLai = soA * Math.pow( (1+ soC/100),soB);
+        document.getElementById("ketQua").innerHTML = "Số tiền phải trả : "+soTienLai + "VND";
+
+    }
+</script>
+</html>

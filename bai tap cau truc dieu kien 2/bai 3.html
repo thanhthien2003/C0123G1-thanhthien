@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<input type="number" id="canha" placeholder="nhap canh hinh vuong vao">
+<button onclick="S()" >Dien tich hinh vuong bang ? </button>
+<p id="result"> ket qua</p>
+<script>
+    function S() {
+    var a = document.getElementById("canha").value;
+    var result ;
+    result =  Math.pow(a,2)
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+
+</body>
+</html>
