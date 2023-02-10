@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<input type="number" id="so_a" >
+<input type="number" id="so_b" >
+<button onclick="tinhtoan()">Bam vao de tao tinh</button>
+<p id="result">ket qua se hien ra o day</p>
+</body>
+<script>
+    function tinhtoan() {
+        var a = document.getElementById("so_a").value;
+        var b = document.getElementById("so_b").value;
+        var result;
+        if (a % b === 0) {
+            result = "Voi a= " + a + " b=" + b + " thi a chia het cho b";
+        } else {
+            result = "Voi a= " + a + " b=" + b + " thi a k chia het cho b";
+
+        }
+        document.getElementById("result").innerHTML = result ;
+    }
+</script>
+</html>

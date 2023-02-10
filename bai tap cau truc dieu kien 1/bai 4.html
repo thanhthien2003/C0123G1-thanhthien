@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+ <input type="number" id="a"  placeholder="nhap so a vo">
+<input type="number" id="b" placeholder="nhap so b vo">
+<input type="number" id="c" placeholder="nhap so c vo">
+<button onclick="Sosanh()" >so sanh</button>
+<p id="result">so nao la lon nhat</p>
+ <script>
+     function Sosanh() {
+
+         var numb1 = document.getElementById("a").value;
+         var numb2 = document.getElementById("b").value;
+         var numb3 = document.getElementById("c").value;
+         var KetQua ;
+
+         if ( numb1 > numb2 ){
+             if ( numb2 > numb3 ){
+                 KetQua = numb1 + " là số lớn nhất";
+             } else if ( numb1 > numb3 ) {
+                 KetQua = numb1 + " là số lớn nhất";
+             } else {
+                 KetQua = numb3 + " là số lớn nhất";
+             }
+         } else if ( numb2 > numb3 ) {
+             KetQua = numb2 + " là số lớn nhất";
+         } else {
+             KetQua = numb3 + " là số lớn nhất";
+         }
+
+         document.getElementById("result").innerHTML = KetQua ;
+     }
+ </script>
+</body>
+
+</html>

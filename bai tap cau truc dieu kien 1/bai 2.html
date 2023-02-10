@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+ <input type="number" id="date">
+<button onclick="tuoi()">Bam vao de he thong check </button>
+<p id="result"> hy vong la du tuoi de vao lp 10</p>
+</body>
+<script>
+    function tuoi() {
+        var date = document.getElementById("date").value;
+        var result ;
+        if (date > 16 ) {
+            result = date + " la du tuoi vao lop 10 roi do  "
+        } else {
+            result = date + "   tuoi  nay sao vao lop 10 duoc ba rang cho them vai nam di "
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+</html>
