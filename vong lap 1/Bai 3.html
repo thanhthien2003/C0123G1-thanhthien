@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<button onclick="finabo()">Let's me show you!!!</button>
+<script>
+    function finabo() {
+        let f0 = 0;
+        let f1 = 1;
+        let fc;
+
+
+        for (i = 0; i < 20; i++) {
+            fc = f0 + f1;
+            f0 = f1;
+            f1 = fc;
+            document.write(fc + ", ");
+        }
+    }
+</script>
+</body>
+</html>
