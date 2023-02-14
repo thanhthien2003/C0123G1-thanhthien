@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+</head>
+<body>
+<button onclick="Play()">Let's play</button>
+ <script>
+     function Play() {
+         let number = +prompt("So ban muon doan trong khoang lon nhat la bao nheu ?")
+         let numberRan = Math.floor(Math.random() * number); console.log(numberRan);
+         let numberAdd
+         let i;
+       for (i=0;i<3;i++) {
+           numberAdd = +prompt("so ban doan ?");
+           if (numberAdd == numberRan) {
+               alert("bingooooooooooo");
+               break
+           } else {
+               alert("you wrong");
+           }
+       }
+       alert("dap an la: "+numberRan);
+     }
+ </script>
+</body>
+</html>
