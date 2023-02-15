@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su dung ham co san cua mang bai 2</title>
+</head>
+<body>
+<label for="nhapVao" >Nhap so vao day</label>
+<input type="text" id = "nhapVao" >
+<button onclick="bamVao()">Xac nhan</button>
+<p id="Result">Ket qua la :</p>
+<script>
+    function bamVao() {
+
+        let xt = document.getElementById("nhapVao").value;
+        let bienTamDung = xt.toString();
+        let ketQua = [bienTamDung[0]];
+        for (i=1;i < bienTamDung.length;i++){
+            if (( bienTamDung[i-1] % 2 === 0) && (bienTamDung[i] % 2 === 0)){
+                ketQua.push("-",bienTamDung[i]);
+            } else {
+                ketQua.push(bienTamDung[i]);
+            }
+        }
+        document.getElementById("Result").innerHTML = ketQua.join("");
+
+    }
+</script>
+</body>
+</html>

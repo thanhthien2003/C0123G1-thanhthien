@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<input type="text" id="nhapVao" placeholder="nhap tung phan tu muon them vao mang vao day :">
+<button onclick="xacNhan()">xac nhan</button>
+<p id="result">ketqua</p>
+<script>
+    function xacNhan() {
+        let a = document.getElementById("nhapVao").value;
+        let c = a.toString();
+        let b = +prompt("nhap so can tim");
+        for (i=0;i < c.length;i++){
+            if (b != c[i] && i == c.length-1){
+                document.write ( b + " is not in the array");
+
+            } else if (b == c[i]){
+                document.write ( b + "is in the array");
+            }
+
+            }
+
+
+        }
+
+
+</script>
+</body>
+</html>

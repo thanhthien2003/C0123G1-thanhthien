@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien phien dich</title>
+</head>
+<body>
+<input type="text" id="nhapVao" placeholder="mau sac co ban vao day!!">
+<button onclick="phienDich()">Translate</button>
+<p id="result">VietNamese</p>
+<script>
+    function phienDich() {
+        let a = ["white", "black", "red", "blue", "pink", "yellow"];
+        let b = ["trang", "den", "do", "xanh duong", "hong", "vang"];
+        let c = document.getElementById("nhapVao").value;
+        let result ="";
+        let bienTamDung = 0;
+        for (i=0;i < a.length;i++){
+            if(c == a[i]){
+                bienTamDung = i ;
+                for(j=0;j < b.length;j++){
+                    if (bienTamDung == j) {
+                        result = b[j];
+                    }
+                }
+            } else {
+                document.getElementById("result").innerHTML = "khong dich duoc";
+            }
+        } document.getElementById("result").innerHTML = result ;
+    }
+</script>
+</body>
+</html>

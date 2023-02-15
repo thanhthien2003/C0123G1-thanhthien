@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su dung ham co san cua mang bai 3</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập chữ");
+    let upper = "QAZWSXEDCRFVTGBYHNUJMIKOLP";
+    let lower = "qwertyuiopasdfghjklzxcvbnm";
+    let ketQua =[];
+    for(let i=0;i < str.length;i++){
+        if (upper.indexOf(str[i]) !== -1 ){
+            ketQua.push(str[i].toLowerCase());
+        }  else if (lower.indexOf(str[i]) !== -1){
+            ketQua.push(str[i].toUpperCase()) ;
+        } else {
+            ketQua.push(str[i]);
+        }
+    }
+    document.write(ketQua.join(""));
+</script>
+</body>
+</html>
