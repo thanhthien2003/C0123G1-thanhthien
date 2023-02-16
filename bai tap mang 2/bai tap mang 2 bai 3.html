@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+   var a = prompt("nhap phan tu cua mang");
+   var i;
+   var count = 0 ;
+
+       // for(i=0;i<a.length;i++) {
+       //     if (!isNaN(a[i])) {
+       //         document.write("nhung so trong mang la :" + a[i] + "<br>");
+       //         count = count + 1;
+       //     }
+       // } document.write( "cac so co trong mang la: " + count);
+
+        for(i=0;i<a.length;i++){
+            if( parseInt(a[i]) === parseInt(a[i])){
+                count = count + 1;
+            }
+        }
+        document.write("Tong so ky tu so trong mang la : " + count);
+</script>
+</body>
+</html>

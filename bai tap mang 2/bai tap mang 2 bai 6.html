@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap phan tu cua mang vao day");
+    let arr = [];// cach 2 let arr = a.split("");
+    for (let i=0;i<a.length;i++){
+        if ( a[i] === "-"){
+            arr.push("_");
+        } else {
+            arr.push(a[i]);
+        }
+    }  document.write(arr.join(""));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+    var a = prompt("nhap vao phan tu mang thu nhat");
+    var b = prompt("nhap vao phan tu mang thu hai");
+    var count = 0;
+    for (i = 0; i < a.length; i++) {
+        if (a.length === b.length && a[i] === b[i]) {
+            count = count + 1;
+            if (count == a.length - 1 && count == b.length - 1) {
+                document.write("hai chuoi nay giong nhau roi do  ");
+                break;
+            }
+        } else {
+            document.write("hai chuoi khong bang nhau");
+            break;
+        }
+    }
+</script>
+</body>
+</html>
