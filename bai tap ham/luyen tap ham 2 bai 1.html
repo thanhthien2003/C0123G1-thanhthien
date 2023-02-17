@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1 </title>
+</head>
+<body>
+<input type="number" id="numberB">
+<button onclick="binhPhuong()">Tinh</button>
+<p id="result">Ket qua </p>
+<script>
+
+    function binhPhuong() {
+        var a = +document.getElementById("numberB").value;
+        var count  ;
+        count = Math.pow(a,2);
+        document.getElementById("result").innerHTML = count;
+    }
+
+</script>
+</body>
+</html>

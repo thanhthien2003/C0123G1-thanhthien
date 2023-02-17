@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<button onclick="timSao()">PLay with star</button>
+<p id = "result">Chom sao tuong ung</p>
+<script>
+    function timSao() {
+        let ngoiSao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        let chomSao = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        let d = prompt("nhap ten ngoi sao toi se tim chom sao cho ban");
+        let count;
+        for (i = 0; i < ngoiSao.length; i++) {
+            if (d === ngoiSao[i]) {
+                count = chomSao[i];
+                break;
+
+            } else {
+                count = "khong co ngoi sao nay";
+            }
+
+        }
+        document.getElementById("result").innerHTML = count;
+    }
+</script>
+
+</body>
+</html>

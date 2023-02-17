@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+</head>
+<body>
+<script>
+    function xetNumber() {
+
+
+        var a = prompt("nhap cai gi vao cung duoc");
+        var count = 0;
+        for (i = 0; i < a.length; i++) {
+            if (!isNaN(a[i])) {
+                count += 1;
+            }
+        }
+        if (count !== a.length) {
+            document.write("false");
+        } else {
+            document.write("true");
+        }
+    }
+    xetNumber();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+<label for="soA">nhap so A </label>
+<input type="number" id="soA"> <br>
+<label for="soB">nhap so B </label>
+<input type="number" id="soB"> <br>
+<button onclick="alert(check())">Check</button>
+<script>
+    function check() {
+        var a = document.getElementById("soA").value;
+        var b = document.getElementById("soB").value;
+        return ("so A la : " + b + " so B la : " + a);
+
+    }
+</script>
+</body>
+</html>

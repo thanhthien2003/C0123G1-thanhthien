@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<input type="number" id="number"> <br>
+<button onclick="alert(check())">Check</button>
+<script>
+    function check() {
+    var a =  +document.getElementById("number").value;
+    var count ;
+    if(a>0){
+        count = "True";
+    } else {
+        count = "False";
+    } return count;
+    }
+
+</script>
+
+</body>
+</html>

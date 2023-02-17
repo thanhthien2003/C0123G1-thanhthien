@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<label for="tinhG">Nhap so muon tinh giai thua</label>
+<input type="number" id="tinhG">
+<button onclick="alert(tinhGT())">Tinh</button>
+<script>
+    function tinhGT() {
+        var a = +document.getElementById("tinhG").value;
+        var count = 1 ;
+        for(i=1;i<=a;i++){
+            count = count * i ;
+        }
+        return count;
+    }
+    // alert(tinhGT());
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<label for="soA">nhap vao so A</label>
+<input type="number" id="soA"> <br>
+<label for="soB">nhap vao so B</label>
+<input type="number" id="soB">
+<button onclick="soSanh()">Comepare A and B</button>
+<p id="result">Ket Qua </p>
+<script>
+
+    function soSanh() {
+        var a = +document.getElementById("soA").value;
+
+        var b = +document.getElementById("soB").value;
+        var ketQua;
+        if(a <= b) {
+            ketQua = a + b ;
+            document.getElementById("result").innerHTML = " A be hon B va tong 2 so la : " + ketQua;
+        } else {
+            document.getElementById("result").innerHTML = "vi so A lon hon so B nen khong du dieu kien tinh tong 2 so ";
+        }
+    }
+</script>
+</body>
+</html>
