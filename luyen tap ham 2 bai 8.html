@@ -7,11 +7,17 @@
 <body>
 <script>
     function daoNguoc() {
-    var a = [prompt("nhap day so nguyen bat ki"),2];
-      a=  a.reverse();
-    document.write(a);
+    var a = prompt("nhap day so nguyen bat ki");
+    var b = [];
+    for(let i=0;i < a.length;i++){
+        b.unshift(a[i]);
+    }
+    ;
+    document.write(b.join(""));
+
     }
     daoNguoc();
+
 </script>
 </body>
 </html>

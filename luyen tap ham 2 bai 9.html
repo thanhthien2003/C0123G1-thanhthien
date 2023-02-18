@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 9</title>
+</head>
+<body>
+<button onclick="timKiem()"> Let's play </button>
+<script>
+    function timKiem() {
+
+
+        var nhapMang = prompt("nhap chuoi bat ky vao day");
+        var timKiem = prompt("nhap ky tu ban muon tim kiem");
+        var count = 0;
+
+        for (i = 0; i < nhapMang.length; i++) {
+            if (timKiem == nhapMang[i]) {
+                count += 1;
+            }
+        }
+
+            if (count == 0) {
+                alert("khong co ky tu nay trong mang");
+            } else {
+                alert("so lan ky tu " + timKiem + " xuat hien trong mang la " + count);
+
+            }
+        }
+
+
+</script>
+</body>
+</html>
