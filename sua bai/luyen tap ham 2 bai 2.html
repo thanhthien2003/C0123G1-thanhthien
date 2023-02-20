@@ -13,25 +13,24 @@
 <script>
     function tinhV() {
         var a = +document.getElementById("banKinh").value
-        let ketQua ;
-        if ( a <= 0){
+        let ketQua;
+        if (a <= 0) {
             document.getElementById("result").innerHTML = "khong the tinh duoc";
         } else {
             ketQua = Math.PI * (a * 2);
             document.getElementById("result").innerHTML = "chu vi bang= " + ketQua + " cm";
         }
-
     }
+
     function tinhS() {
         var a = +document.getElementById("banKinh").value;
-        let ketQua ;
-        if ( a <= 0){
+        let ketQua;
+        if (a <= 0) {
             document.getElementById("result").innerHTML = "khong the tinh duoc";
         } else {
-            ketQua = Math.PI * (Math.pow(a,2));
+            ketQua = Math.PI * (Math.pow(a, 2));
             document.getElementById("result").innerHTML = "dien tich bang bang= " + ketQua + " cm^2";
         }
-
     }
 </script>
 </body>
