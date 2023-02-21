@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ve hinh chu nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" heigth="200"></canvas>
+<script>
+    class Rectangle {
+
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+    }
+
+    var a = +prompt("nhap chieu dai vao");
+    var b = +prompt("nhap chieu rong vao ");
+    let myRectangle = new Rectangle(a, b);
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+    let area = myRectangle.getArea();
+    let perimeter = myRectangle.getPerimeter();
+    document.write("chieu dai = " + width);
+    document.write("<br>");
+    document.write("chieu rong = " + height);
+    document.write("<br>");
+    document.write("dien tich = " + area);
+    document.write("<br>");
+    document.write("chu vi = " + perimeter);
+    document.write("<br>");
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(a, 0);
+    ctx.moveTo(a, 0);
+    ctx.lineTo(a, b);
+    ctx.moveTo(a, b);
+    ctx.lineTo(0, b);
+    ctx.lineTo(0, 0);
+    ctx.stroke();
+
+</script>
+</body>
+</html>

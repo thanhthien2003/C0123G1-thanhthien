@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        getDoC() {
+            return this.doC;
+        }
+
+        setDoC(doC) {
+            return this.doC = doC;
+        }
+
+        getChangeF() {
+            return this.doC * (9 / 5) + 32;
+        }
+
+        getChangeK() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let a = +prompt("nhap do C vo dayy");
+    let myTemperature = new Temperature(a);
+    let changeF = myTemperature.getChangeF();
+    let changeK = myTemperature.getChangeK();
+    document.write(changeF + " F");
+    document.write("<br>");
+    document.write(changeK + " K");
+</script>
+</body>
+</html>
