@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+
+
+    function check(a) {
+
+
+        let count = 0;
+        let sount = (a[0] - a[1]);
+        let bienDem = 0;
+        for (let i = 1; i < a.length; i++) {
+            count = a[i-1] - a[i];
+
+            if (count != sount) {
+                bienDem = 2;
+            }
+            count = 0;
+        }
+        if (bienDem == 2) {
+            document.write("false");
+        }
+        if(bienDem == 0){
+            document.write("true");
+        }
+    }
+
+    let n = +prompt("nhap do dai cua mang vao day");
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt("nhap phan tu thu " + i + " cua mang ");
+    }
+    check(a);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    let n=+prompt("nhap so phan tu mang");
+    let a =[];
+    for(let j=0;j<n;j++){
+        a[j]=+prompt("nhap phan tu"+j);
+    }
+    document.write("mang duoc nhap la :"+a+"<br>");
+    var sum = 0;
+    for(var i=1;i<a.length;i++){
+        if(a[i] % 2 == 0 && i % 2 != 0 ){
+            sum = sum + a[i]
+        }
+    }
+    document.write("tong cac so chan o vi tri le = " + sum);
+</script>
+</body>
+</html>
