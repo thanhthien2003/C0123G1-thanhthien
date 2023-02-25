@@ -5,6 +5,26 @@
     <title>bai 4</title>
 </head>
 <body>
-
+<script>
+    let n=+prompt("nhap so phan tu mang");
+    let a =[];
+    for(let j=0;j<n;j++){
+        a[j]=+prompt("nhap phan tu"+j);
+    }
+    document.write("mang nhap la: "+a+"<br>");
+    let count = 0;
+    for(let i=0;i<a.length;i++){
+        if(a[i]==a[a.length-1-i]){
+            count++;
+        }
+        else{
+            document.write("la mang k doi xung ");
+            break;
+        }
+    }
+    if(count==a.length){
+        document.write("la mang doi xung");
+    }
+</script>
 </body>
 </html>
