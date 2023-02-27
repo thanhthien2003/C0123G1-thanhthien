@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai I-1</title>
+</head>
+<body>
+<input type="number" id="luong" placeholder="trieu/thang vnd">
+<button onclick="tinhLuong()">tinh thue luong</button>
+<p id="result"></p>
+<script>
+    function tinhLuong() {
+
+        var sum = 0;
+        var a = +document.getElementById("luong").value;
+
+        if (a < 7) {
+            sum = (a * 5) / 100;
+        }
+        if (a > 7 && a < 15) {
+            sum = (a * 10) / 100;
+        }
+        if
+        (a >= 15) {
+            sum = (a * 20) / 100;
+        }
+        document.getElementById("result").innerHTML = "so tien sau khi danh thue thu nhap = " + (a - sum) + "trieu vnd ";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let height = +prompt("Nhập chiều cao tam giác :");
+    let pen = "";
+    for (let i = 1; i <= height; i++) {
+        for (let j = 0; j < height -i ; j++) {
+            pen += "&ensp;";
+        }
+        for (let k = 0; k < i * 2 - 1; k++) {
+            if (k === 0 || i === height || i ===0 || k === i*2-2 ) {
+                pen += "*";
+            } else {
+                pen +="&ensp;"
+            }
+        }
+        pen += "<br>";
+    }
+    document.write(pen);
+</script>
+</body>
+</html>

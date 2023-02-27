@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    var a = prompt("nhap so mang a vao day");
+    var b = prompt("nhap so mang b vao day ");
+    var c = [];
+    for (let i = 0; i < b.length; i++) {
+        if (a.indexOf(b[i]) === -1) {
+            c.push(b[i]);
+        }
+    }
+    document.write("cac so o mang b ma mang a khum co se vo mang c nay : " + c + "<br>");
+</script>
+</body>
+</html>

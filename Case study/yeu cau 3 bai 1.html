@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    var n = +prompt("do dai cua mang a");
+    var a = [];
+    var b = [];
+    var sum = 0;
+    for(let i = 0;i<n;i++){
+        a[i] = +prompt("nhap phan tu thu " + i + " cua a");
+    }
+    for(i = 0;i<a.length;i++){
+        for (let j = 0;j<=i;j++){
+            sum = sum + a[j]
+
+        } b[i] = sum ;
+        sum = 0;
+    }
+    document.write("mang luc dau duoc nhap la " + a);
+    document.write("<br>");
+    document.write("mang sau khi tinh toan la : " + b);
+</script>
+</body>
+</html>

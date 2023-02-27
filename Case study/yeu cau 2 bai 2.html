@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let height = +prompt("Nhập chiều cao tam giác :");
+    let pen = "";
+    for (let i = 1; i <= height; i++) {
+        for (let j = 0; j < height -i ; j++) {
+            pen += "$";
+        }
+        for (let k = 0; k < i * 2 - 1; k++) {
+            pen += "*";
+        }
+        pen += "<br>";
+    }
+    document.write(pen);
+</script>
+</body>
+</html>
