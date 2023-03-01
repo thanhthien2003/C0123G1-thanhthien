@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    function minMax() {
+        var m = +prompt("nhap chieu dai cua mang");
+        var n = +prompt("nhap chieu dai cua tung mang con trong mang");
+        var a = [];
+        for (let i = 0; i < m; i++) {
+            a[i] = [];
+            for (let j = 0; j < n; j++) {
+                a[i][j] = +prompt("phan tu trong mang con thu " + i);
+            }
+        }
+        let max = a[0][0];
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] > max) {
+                    max = a[i][j];
+                }
+            }
+        }
+        document.write("max la : " + max + "<br>");
+        let min = a[0][0];
+        for(let i=0;i<a.length;i++){
+            for(let j =0;j<a[i].length;j++){
+                if(a[i][j] < min ){
+                    min = a[i][j];
+                }
+            }
+        }
+        document.write("min la : " + min);
+    }
+    minMax();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    var a1 = prompt("nhap chuoi a");
+    var b1 = prompt("nhap chuoi b");
+    var a = a1.split("");
+    var b = b1.split("");
+    var c = [];
+
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] === b[j]) {
+                c.push(b[j]);
+                b.splice(j,1);
+                break;
+            }
+        }
+    }
+    document.write(c);
+</script>
+</body>
+</html>

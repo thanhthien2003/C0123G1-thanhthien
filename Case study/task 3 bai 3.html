@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    var nuMer = [5,2,5];
+    var deNo = [6,3,4];
+    var max = 5/6;
+    var count = 0;
+    var sult = 0;
+    for(let i=0;i<nuMer.length;i++){
+        count = nuMer[i]/deNo[i];
+        if(count > max ){
+            max = count ;
+            sult = i;
+        }
+    }
+    document.write("gia tri cua phan so lon nhat la " + max + " co chi so la  " + sult + "<br>");
+    document.write("phan so lon nhat la " + nuMer[sult] + "/" + deNo[sult]);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    function tongMT() {
+        var m = +prompt("nhap chieu dai cua mang m ");
+        var n = +prompt("nhap chieu dai cua mang n ");
+        var arr = [];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("nhap phan tu thu" + j + " cua mang thu " + i);
+            }
+        }
+        var sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    sum = sum + arr[i][j];
+                }
+            }
+        }
+        document.write("tong cac gia tri chan trong ma tran la " + sum);
+    }
+
+    tongMT();
+</script>
+</body>
+</html>

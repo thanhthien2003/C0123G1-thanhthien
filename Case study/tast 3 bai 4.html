@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+</head>
+<body>
+<h1>Menu</h1>
+
+<select id="chonMon">
+    <option value="1.Cafe">1.Cafe</option>
+    <option value="2.Cam vat">2.Cam vat</option>
+    <option value="3.Nuoc ep ca rot">3.Nuoc ep ca rot</option>
+    <option value="4.nuoc ep ca chua">4.nuoc ep ca chua</option>
+    <option value="5.nuoc loc">5.nuoc loc</option>
+    <option value="6.nuoc dua">6.nuoc dua</option>
+</select>
+<button onclick="chonMenu()">xac nhan</button>
+<button onclick="thanhToan()">Thanh toan</button>
+<button onclick="cancel()">Thoat goi mon</button>
+<p id="result"></p>
+<p id="giaCa"></p>
+<script>
+    var c = 0;
+    let menu = ["1.Cafe", "2.Cam vat", "3.Nuoc ep ca rot", "4.nuoc ep ca chua", "5.nuoc loc", "6.nuoc dua"];
+    let price = [10000, 15000, 15000, 20000, 10000, 30000];
+
+    function chonMenu() {
+        let e = document.getElementById("chonMon").value;
+        for (i = 0; i < menu.length; i++) {
+            if (e == menu[i]) {
+                document.getElementById("result").innerHTML += "ban da chon mon " + e + " co gia la " + price[i] + "<br>";
+                c += price[i];
+            }
+        }
+    }
+
+    function thanhToan() {
+        document.getElementById("giaCa").innerHTML = "tong bill = " + c
+    }
+
+    function cancel() {
+        alert("Chuc quy khach ngon mieng");
+    }
+</script>
+</body>
+</html>

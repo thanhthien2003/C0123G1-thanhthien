@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap chuoi ky tu vo day");
+    let arr = [];
+    for (let i = 0; i < a.length; i++) {
+        let check = true;
+        for (let j = 0; j < arr.length; j++) {
+            if(a[i] == arr[j]){
+                check = false;
+            }
+        }
+        if(check){
+            arr.push(a[i]);
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

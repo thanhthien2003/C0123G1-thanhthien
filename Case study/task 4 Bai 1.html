@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    var a = prompt("nhap 1 chuoi bat ky vao");
+    var b = " ";
+    var count = 0;
+    var arrLower = [];
+    document.write("sau truoc khi chuan hoa " + a + "<br>");
+    for (let i = 1; i <= a.length; i++) {
+        if (a[i - 1] != b && a[i] != b) {
+            arrLower.push(a[i - 1].toLowerCase());
+        } else if (a[i - 1] != b && a[i] == b) {
+            arrLower.push(a[i - 1].toLowerCase());
+        } else if (a[i - 1] == b && a[i] != b) {
+            arrLower.push(a[i - 1].toLowerCase());
+        }
+    }
+    for(let i=1;i<=arrLower.length;i++){
+        if(arrLower[i-1]==b && arrLower[i] != b){
+            arrLower[i] = arrLower[i].toUpperCase();
+            arrLower[0] = arrLower[0].toUpperCase();
+        }
+    }
+    document.write("xau sau khi chuan hoa " + arrLower.join(""));
+    var longArr  = arrLower.join("").toString().split(" ");
+    var max = longArr[0];
+    for(let i =0;i<longArr.length;i++){
+        if(longArr[i].length > max.length){
+            max = longArr[i];
+        }
+    }
+    document.write("<br>" + "tu dai nhat cua mang la " + max);
+</script>
+</body>
+</html>
