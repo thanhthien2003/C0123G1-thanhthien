@@ -2,9 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bai 6</title>
 </head>
 <body>
-
+<button onclick="create()">Them moi hoc vien</button>
+<button onclick="change()">sua thong tin hoc vien</button>
+<button onclick="deleteStu()">xoa hoc vien</button>
+<div id="tableStudentList"></div>
 </body>
+<script>
+    class Student {
+        constructor(MSV, ten, lop, email, date, module) {
+            this.MSV = MSV;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.date = date;
+            this.module = module;
+        }
+    }
+
+    let studentList = [];
+
+    function create() {
+        let msv = prompt("nhap msv");
+        let tEn = prompt("nhap ten");
+        let lOp = prompt("lop");
+        let eMail = prompt("email");
+        let daTe = prompt("date");
+        let moDule = prompt("nhap module dang hoc");
+        let newStudent = new Student(msv, tEn, lOp, eMail, daTe, moDule);
+        studentList.push(newStudent);
+        displayStudentList(studentList);
+    }
+
+    function displayStudentList(studentList) {
+        let table = "<table border='1' style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>MSV</th>" +
+            "<th>Ten</th>" +
+            "<th>Lop</th>" +
+            "<th>Email</th>" +
+            "<th>Ngay sinh</th>" +
+            "<th>Module</th>" +
+            "</tr>";
+        for (let i = 0; i < studentList.length; i++) {
+            table += "<tr>" +
+                "<td>" + studentList[i].MSV + "</td>" +
+                "<td>" + studentList[i].ten + "</td>" +
+                "<td>" + studentList[i].lop + "</td>" +
+                "<td>" + studentList[i].email + "</td>" +
+                "<td>" + studentList[i].date + "</td>" +
+                "<td>" + studentList[i].module + "</td>" +
+                "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("tableStudentList").innerHTML = table;
+    }
+
+    function deleteStu() {
+        let a = prompt("MSV");
+        let count = 0;
+        for (let i = 0; i < studentList.length; i++) {
+            if (a === studentList[i].MSV) {
+                let confirmDelete = confirm("are you sure?" + a);
+                if (confirmDelete) {
+                    studentList.splice(i, 1);
+                    displayStudentList(studentList);
+                    alert("xoa roi may ");
+                    break;
+                } else {
+                    alert("cancel");
+                }
+            } else {
+                count++
+
+            }
+            if (count === studentList.length) {
+                alert("ma hoc zien khong ton tai ");
+            }
+        }
+    }
+
+    function change() {
+        let msv = prompt("nhap MSV mun xoa ");
+        let count = 0;
+        let updateStudent;
+        for (let i = 0; i < studentList.length; i++) {
+            if (msv === studentList[i].MSV) {
+                updateStudent = studentList[i];
+                break;
+                //
+                // let tEn = prompt("nhap ten");
+                // let lOp = prompt("lop");
+                // let eMail = prompt("email");
+                // let daTe = prompt("date");
+                // let moDule = prompt("nhap module dang hoc");
+                // let updateStudent = new Student(msv, tEn, lOp, eMail, daTe, moDule);
+                // studentList[i] = updateStudent
+                // displayStudentList(studentList);
+
+            } else {
+                count++;
+            }
+        }
+        if (count == studentList.length) {
+            alert("khong ton tai MSV nay")
+        }
+        let choose = prompt("Ban muon sua thong tin gi? \n" +
+            "1. ten \n" +
+            "2. lop \n" +
+            "3. email \n" +
+            "4. date \n" +
+            "5. module \n" +
+            "6. thoat"
+        )
+        switch (choose) {
+            case "1":
+                let name = prompt("nhap ten");
+                updateStudent.ten = name;
+                break;
+            case "2":
+                let classes = prompt("nhap lop");
+                updateStudent.lop = classes;
+                break;
+            case "3":
+                let email = prompt("email");
+                updateStudent.email = email;
+                break;
+            case "4":
+                let date = prompt("date");
+                updateStudent.date = date;
+                break;
+            case "5":
+                let module = prompt("module");
+                updateStudent.module = module;
+                break;
+            case "6":
+                break;
+        }
+        displayStudentList(studentList);
+
+    }
+</script>
 </html>
